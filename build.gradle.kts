@@ -1,1 +1,1 @@
-// Root build configuration for morphe-patches-template
+// Root build configuration for pancake-patches
