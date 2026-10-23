@@ -25,9 +25,5 @@ val playerOutroPatch = bytecodePatch(
             0,
             "return-void",
         )
-        FavoriteGuidelineFingerprint.method.addInstructions(
-            0,
-            "return-void",
-        )
     }
 }

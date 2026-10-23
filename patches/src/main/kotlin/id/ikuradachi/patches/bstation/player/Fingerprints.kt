@@ -2,7 +2,6 @@ package id.ikuradachi.patches.bstation.player
 
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.fieldAccess
-import app.morphe.patcher.instanceOf
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.newInstance
@@ -11,6 +10,11 @@ import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
+// ============================================================================
+// Target 4: Video Player Outro / Unlock Video Guide Bottom-Right Card
+// ============================================================================
+
+// Target 4A: Suppress Unlock Video Guide Progress Dispatcher
 object UnlockVideoGuideProgressFingerprint : Fingerprint(
     definingClass = "Lcom/biliintl/playdetail/page/ad/unlock/UnlockVideoGuideService;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
@@ -23,6 +27,7 @@ object UnlockVideoGuideProgressFingerprint : Fingerprint(
     ),
 )
 
+// Target 4B: Suppress Landscape Bottom-Right Outro Popup
 object UnlockVideoGuideLandscapeFingerprint : Fingerprint(
     definingClass = "Lcom/biliintl/playdetail/page/ad/unlock/UnlockVideoGuideService;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
@@ -34,26 +39,27 @@ object UnlockVideoGuideLandscapeFingerprint : Fingerprint(
     ),
 )
 
-object UnlockVideoGuideWidgetFingerprint : Fingerprint(
-    definingClass = "Lcom/biliintl/playdetail/page/ad/unlock/p;",
-    accessFlags = listOf(AccessFlags.PUBLIC),
-    returnType = "V",
-    parameters = listOf("Lkj1/a\$a;"),
+// Target 4C: Suppress Unlock Video Guide Widget View Attachment
+object UnlockVideoGuideWidgetClassFingerprint : Fingerprint(
     filters = listOf(
-        instanceOf("Lcom/biliintl/playdetail/page/ad/unlock/q;"),
-        newInstance("Lcom/biliintl/playdetail/page/ad/unlock/m;"),
+        string("UnlockVideoGuideWidget"),
     ),
 )
 
-object FavoriteGuidelineFingerprint : Fingerprint(
-    definingClass = "Lcom/biliintl/playdetail/page/list/community/guideline/FavoriteGuidelineService;",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+object UnlockVideoGuideWidgetFingerprint : Fingerprint(
+    classFingerprint = UnlockVideoGuideWidgetClassFingerprint,
+    accessFlags = listOf(AccessFlags.PUBLIC),
     returnType = "V",
-    parameters = listOf("Lcom/biliintl/play/model/view/ViewCommunityCardMeta\$FavToast;"),
+    parameters = listOf("L"),
     filters = listOf(
-        newInstance("Lcom/biliintl/playdetail/page/list/community/guideline/FavoriteGuidelineComponent;"),
+        newInstance("Landroid/widget/FrameLayout\$LayoutParams;"),
+        methodCall(definingClass = "Landroid/view/ViewGroup;", name = "addView"),
     ),
 )
+
+// ============================================================================
+// Target 5: Video Player In-Stream Bottom-Right Overlay Ad Banner
+// ============================================================================
 
 object OverlayAdGateFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
@@ -68,6 +74,10 @@ object OverlayAdGateFingerprint : Fingerprint(
     ),
 )
 
+// ============================================================================
+// Target 6: Fullscreen Bottom-Right Player Recommendation Widget
+// ============================================================================
+
 object PlayerRecommendWidgetActivateFingerprint : Fingerprint(
     definingClass = "Lcom/biliintl/playdetail/page/player/panel/widget/control/PlayerRecommendWidget;",
     accessFlags = listOf(AccessFlags.PUBLIC),
@@ -77,5 +87,19 @@ object PlayerRecommendWidgetActivateFingerprint : Fingerprint(
         string("mPlayerContainer"),
         opcode(Opcode.CHECK_CAST),
         literal(8),
+    ),
+)
+
+// ============================================================================
+// Community Guideline Toast (separate from player outro unlock card)
+// ============================================================================
+
+object FavoriteGuidelineFingerprint : Fingerprint(
+    definingClass = "Lcom/biliintl/playdetail/page/list/community/guideline/FavoriteGuidelineService;",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("Lcom/biliintl/play/model/view/ViewCommunityCardMeta\$FavToast;"),
+    filters = listOf(
+        newInstance("Lcom/biliintl/playdetail/page/list/community/guideline/FavoriteGuidelineComponent;"),
     ),
 )
