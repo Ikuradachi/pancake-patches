@@ -1,5 +1,334 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "0.0.0",
-  "patches": []
+  "version": "1.0.0",
+  "patches": [
+    {
+      "name": "Disable floating ads",
+      "description": "Disables bottom-right promotional floating advertisement overlay.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable inner push banner",
+      "description": "Disables top slide-down promotional toast and inner-push banner notifications.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable player outro unlock card",
+      "description": "Disables video player outro unlock video guide bottom-right card.",
+      "default": true,
+      "category": "Player",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable player overlay ads",
+      "description": "Disables video player in-stream bottom-right overlay ad banners.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable player recommendation widget",
+      "description": "Disables fullscreen video player bottom-right recommendation widget.",
+      "default": true,
+      "category": "Player",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable splash ads",
+      "description": "Disables cold-start splash advertisement loading and countdown timer.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable tracking",
+      "description": "Disables internal Bilibili telemetry, APM profiling, TradPlus ad mediation, Firebase analytics, Crashlytics, and Facebook AppEvents.",
+      "default": true,
+      "category": "Privacy",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable tracking and analytics (Experimental)",
+      "description": "Attempts to block background telemetry and trackers. Not guaranteed to stop 100% of data collection.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "net.easyconn.carman.wws",
+          "name": "CarbitLink",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": "6.5.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 24,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Enable browser",
+      "description": "Shows the browser in the projected mirror grid for non-SDK mode.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "net.easyconn.carman.wws",
+          "name": "CarbitLink",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": "6.5.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 24,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "GmsCore support",
+      "description": "Uses Morphe GmsCore for Google sign-in and sign-out.",
+      "default": true,
+      "category": "Misc",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "GmsCore support",
+      "description": "Uses Morphe GmsCore for Google sign-in and sign-out.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "net.easyconn.carman.wws",
+          "name": "CarbitLink",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": "6.5.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 24,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Unlock VIP features",
+      "description": "Enables Mapbox, Google Maps, Spotify integration, and TwinSpace features.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "net.easyconn.carman.wws",
+          "name": "CarbitLink",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": null,
+          "signatures": null,
+          "targets": [
+            {
+              "version": "6.5.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 24,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    }
+  ]
 }
