@@ -1,3 +1,14 @@
+## 1.0.0 (2026-10-24)
+
+### 🐛 Bug Fixes
+
+* fullscreen player outro annoying pop ([2b66330](https://github.com/Ikuradachi/pancake-patches/commit/2b6633055a4dae76927cde842e52ef1b0afa1963))
+
+### ✨ New Features
+
+* add bstation patches ([a4fd45c](https://github.com/Ikuradachi/pancake-patches/commit/a4fd45c4f4101e7e98081d9af7f939cf443f9eb6))
+* migrate carbitlink patches from carbit-patches ([b48ad97](https://github.com/Ikuradachi/pancake-patches/commit/b48ad97383b4a16f3ea4e52aedba2048b25a5e45))
+
 ## 1.0.0-dev.1 (2026-10-24)
 
 ### 🐛 Bug Fixes
