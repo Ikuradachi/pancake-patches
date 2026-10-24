@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/Ikuradachi/pancake-patches/compare/v1.0.0...v1.1.0) (2026-10-24)
+
+### ✨ New Features
+
+* bstation - remove player watermark ([ccd12d5](https://github.com/Ikuradachi/pancake-patches/commit/ccd12d58b225d09c4924d5d7845e92d6b57166d6))
+
 ## [1.1.0-dev.1](https://github.com/Ikuradachi/pancake-patches/compare/v1.0.0...v1.1.0-dev.1) (2026-10-24)
 
 ### ✨ New Features
