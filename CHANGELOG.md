@@ -1,3 +1,10 @@
+## [1.2.0-dev.1](https://github.com/Ikuradachi/pancake-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-10-24)
+
+### ✨ New Features
+
+* bstation - add hide bottom navigation items patch ([5e6abeb](https://github.com/Ikuradachi/pancake-patches/commit/5e6abeb82aceacf27177fc62723982ac7ab6f132))
+* bstation - add UI debloat and cleanup patches ([c72b79a](https://github.com/Ikuradachi/pancake-patches/commit/c72b79a6260870a36b3d57db8d3140605ee4c252))
+
 ## [1.1.0](https://github.com/Ikuradachi/pancake-patches/compare/v1.0.0...v1.1.0) (2026-10-24)
 
 ### ✨ New Features
