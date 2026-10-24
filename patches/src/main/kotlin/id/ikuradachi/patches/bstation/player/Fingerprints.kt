@@ -141,3 +141,50 @@ object ChronosCheckRecommendDanmakuFingerprint : Fingerprint(
         "L",
     ),
 )
+
+// ============================================================================
+// Target 9: Video Player Top-Right Brand & Premium Copyright Watermark
+// ============================================================================
+
+// Target 9A: Neutralize Watermark Loader (WaterMarkService.p()V)
+object WaterMarkLoadFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf(),
+    filters = listOf(
+        fieldAccess(
+            definingClass = "Lcom/biliintl/playdetail/fundation/watermark/WaterMarkService;",
+            type = "Lcom/biliintl/play/model/playcontrol/Watermark;",
+        ),
+        fieldAccess(
+            definingClass = "Lcom/biliintl/playdetail/fundation/watermark/WaterMarkService;",
+            type = "Landroid/util/Size;",
+        ),
+        string("mPlayerContainer"),
+    ),
+)
+
+// Target 9B: Force Watermark Layer Visibility to GONE (WaterMarkService.setVisible(Z)V)
+object WaterMarkSetVisibleFingerprint : Fingerprint(
+    name = "setVisible",
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf("Z"),
+    filters = listOf(
+        string("mWaterMarkLayer"),
+    ),
+)
+
+// Target 9C: Suppress Watermark Model Assignment (WaterMarkService.D1(Watermark)V)
+object WaterMarkSetFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf("Lcom/biliintl/play/model/playcontrol/Watermark;"),
+    filters = listOf(
+        fieldAccess(
+            definingClass = "Lcom/biliintl/playdetail/fundation/watermark/WaterMarkService;",
+            type = "Lcom/biliintl/play/model/playcontrol/Watermark;",
+        ),
+    ),
+)
+

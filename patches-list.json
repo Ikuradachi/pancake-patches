@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0",
+  "version": "1.1.0-dev.1",
   "patches": [
     {
       "name": "Disable floating ads",
@@ -117,6 +117,34 @@
     {
       "name": "Disable player recommendation widget",
       "description": "Disables fullscreen video player bottom-right recommendation widget.",
+      "default": true,
+      "category": "Player",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bstar.intl",
+          "name": "Bstation",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#00A1D6",
+          "signatures": [
+            "ca819a80c96372b8900b1a05a88888f94f9aa4b2da9e483b344dcabd254d40b4"
+          ],
+          "targets": [
+            {
+              "version": "3.83.1",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Disable player watermark",
+      "description": "Hides the top-right brand logo and copyright/premium watermark in the video player.",
       "default": true,
       "category": "Player",
       "compatiblePackages": [
