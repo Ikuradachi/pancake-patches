@@ -13,9 +13,9 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0](https://github.com/Ikuradachi/pancake-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;12 patches total
+> **[v1.1.0-dev.1](https://github.com/Ikuradachi/pancake-patches/releases/tag/v1.1.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;13 patches total
 <details open>
-<summary>📦 Bstation&nbsp;&nbsp;•&nbsp;&nbsp;8 patches</summary>
+<summary>📦 Bstation&nbsp;&nbsp;•&nbsp;&nbsp;9 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -30,6 +30,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 | [Disable player outro unlock card](#disable-player-outro-unlock-card) | Disables video player outro unlock video guide bottom-right card. |  |
 | [Disable player overlay ads](#disable-player-overlay-ads) | Disables video player in-stream bottom-right overlay ad banners. |  |
 | [Disable player recommendation widget](#disable-player-recommendation-widget) | Disables fullscreen video player bottom-right recommendation widget. |  |
+| [Disable player watermark](#disable-player-watermark) | Hides the top-right brand logo and copyright/premium watermark in the video player. |  |
 | [Disable splash ads](#disable-splash-ads) | Disables cold-start splash advertisement loading and countdown timer. |  |
 | [Disable tracking](#disable-tracking) | Disables internal Bilibili telemetry, APM profiling, TradPlus ad mediation, Firebase analytics, Crashlytics, and Facebook AppEvents. |  |
 | [GmsCore support](#gmscore-support) | Uses Morphe GmsCore for Google sign-in and sign-out. |  |
