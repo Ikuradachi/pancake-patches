@@ -103,3 +103,41 @@ object FavoriteGuidelineFingerprint : Fingerprint(
         newInstance("Lcom/biliintl/playdetail/page/list/community/guideline/FavoriteGuidelineComponent;"),
     ),
 )
+
+// ============================================================================
+// Target 8: Chronos Engine Command Danmaku Popups (#OPUS_PUBLISH#, #RECOMMAND#, etc.)
+// ============================================================================
+
+// Target 8A: Chronos LocalServiceHandler GetCommandInfo RPC Gate
+object ChronosGetCommandInfoFingerprint : Fingerprint(
+    definingClass = "Ltv/danmaku/biliplayer/service/interact/biz/chronos/chronosrpc/local/LocalServiceHandler;",
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf(
+        "Ltv/danmaku/biliplayer/service/interact/biz/chronos/chronosrpc/methods/receive/GetCommandInfo\$Request;",
+        "L",
+        "L",
+    ),
+)
+
+// Target 8B: Chronos ViewProgress gRPC Dispatcher
+object ChronosViewProgressGrpcFingerprint : Fingerprint(
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "V",
+    parameters = listOf("Ljava/lang/String;", "[B", "L"),
+    filters = listOf(
+        string("bilibili.intl.app.interface.v1.App/ViewProgress"),
+        string("bstar_grpc_call_view_progress"),
+    ),
+)
+
+// Target 8C: Chronos CheckRecommendDanmaku RPC Gate
+object ChronosCheckRecommendDanmakuFingerprint : Fingerprint(
+    definingClass = "Ltv/danmaku/biliplayer/service/interact/biz/chronos/chronosrpc/local/LocalServiceHandler;",
+    accessFlags = listOf(AccessFlags.PUBLIC),
+    returnType = "V",
+    parameters = listOf(
+        "Ltv/danmaku/biliplayer/service/interact/biz/chronos/chronosrpc/methods/receive/CheckRecommendDanmaku\$Request;",
+        "L",
+    ),
+)
